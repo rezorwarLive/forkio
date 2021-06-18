@@ -1,0 +1,198 @@
+.price {
+  background-image: url("../img/layout.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &-container {
+    padding: 100px 0;
+    text-align: center;
+  }
+  &-title {
+    color: #ffffff;
+    font-family: Montserrat, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 20.45px;
+    margin-bottom: 100px;
+  }
+  &-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+    &__item {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      width: 257px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 0;
+      min-height: 100px;
+      margin: 50px 5px;
+      padding: 0 0 35px;
+      text-align: center;
+      color: #fff;
+    }
+    &__title-holder {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 8px 0 13px;
+      margin-bottom: 30px;
+      .recommended &{
+        padding: 12px 0 20px;
+        background: rgba(0,0,0,0.1);
+      }
+    }
+    &__title {
+      color: #ffffff;
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 60px;
+      text-transform: uppercase;
+    }
+    &__main-price {
+      color: #ffffff;
+      font-family: Montserrat, sans-serif;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 90.28px;
+      text-transform: uppercase;
+      .recommended &{
+        font-size: 6rem
+      }
+    }
+    &__caption {
+      color: rgba(255, 255, 255, 0.25);
+      display: block;
+      padding: 0 0 33px;
+      font-weight: 400;
+      font-size: 14px;
+      font-family: Montserrat, sans-serif;
+      text-transform: uppercase;
+      .recommended &{
+        padding: 30px 0 43px;
+      }
+    }
+    &__subtitle {
+      color: #ffffff;
+      text-align: center;
+      font-family: Montserrat, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 32px;
+      padding: 29px 0 22px;
+      min-height: 117px;
+      .recommended &{
+        padding: 50px 0 22px;
+        min-height: 176px;
+        line-height: 32px;
+      }
+    }
+    &__line {
+      content: '';
+      position: absolute;
+      top: 57%;
+      left: 50%;
+      width: 60px;
+      margin: 0 0 0 -30px;
+      height: 5px;
+      background: #8d81ac;
+    }
+    &__button {
+      border-radius: 40px;
+      line-height: 26px;
+      border: none;
+      padding: 14px 40px;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: rgba(255, 255, 255, 0.15);
+      transition: color 200ms ease-in, background-color 200ms ease-in, opacity 200ms ease-in;
+      &:hover{
+        background-color: white;
+        color: $main-color;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+.recommended {
+  margin-top: 0;
+  width: 300px;
+  position: relative;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.2);
+  border-color: #8d81ac;
+
+  .price-block__button {
+    padding: 14px 50px;
+    height: 52px;
+    margin-bottom: 7px;
+  }
+}
+@media only screen and (min-width: $screen-sm + 1) and (max-width: $screen-md){
+  .price-block{
+    width: 75%;
+    margin: 0 auto;
+  }
+  .price{
+    &-title{
+      font-size:32px;
+      margin-bottom:40px;
+    }
+    &-container{
+      padding: 0;
+    }
+    &-block{
+      flex-wrap:wrap;
+      &__item{
+        margin: 30px 5px;
+      }
+      &__line{
+        top: 54%;
+      }
+
+    }
+  }
+  .recommended{
+
+  }
+  .recommended .price-block__caption{
+    padding: 30px 0 40px;
+  }
+
+}
+@media only screen  and (max-width: $screen-sm){
+
+  .price{
+    &-title{
+      font-size:28px;
+      line-height: 42px;
+      margin-bottom:0px;
+    }
+    &-container{
+      padding: 0;
+    }
+    &-block{
+      flex-wrap:wrap;
+      &__item{
+        width: 258px;
+        margin: 10px 0;
+      }
+      &__line{
+        top: 54%;
+      }
+    }
+  }
+  .recommended{
+    width: 290px;
+  }
+  .recommended .price-block__caption{
+    padding: 30px 0 40px;
+  }
+
+}
+

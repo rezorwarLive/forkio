@@ -1,0 +1,173 @@
+.topButtonBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  margin: -33px 0 55px;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.28571428;
+}
+.present-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__title {
+    color: #635c73;
+    font-family: Montserrat,sans-serif;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 20.45px;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    padding-top: 50px;
+    max-width: 900px;
+    color: #323232;
+    font-family: Lato, sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+  }
+
+}
+.present-github{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom:70px;
+  margin-top: 40px;
+  &__svg{
+    vertical-align: sub;
+  }
+  &__action{
+    font-size: 12px;
+    line-height: 20px;
+    padding: 3px 10px;
+    background-position: -1px -1px;
+    background-repeat: repeat-x;
+    background-size: 110% 110%;
+    border: 1px solid rgba(27,31,35,.2);
+    border-radius: .25em;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 3px 10px;
+    position: relative;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #eff3f6;
+    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+    color: #24292e;
+    float:left;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    margin-left:12px;
+    &:hover{
+      background-color: #e6ebf1;
+      background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
+      background-position: -.5em;
+      border-color: rgba(27,31,35,.35);
+    }
+    &--star{
+
+    }
+  }
+    &__links{
+      font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+
+
+      &--count{
+        background-color: #fff;
+        border: 1px solid rgba(27,31,35,.2);
+        border-bottom-right-radius: 3px;
+        border-left: 0;
+        border-top-right-radius: 3px;
+        color: #24292e;
+        float: left;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 20px;
+        padding: 3px 10px;
+        vertical-align: middle;
+        &:hover{
+          color: #0366d6;
+          cursor: pointer;
+        }
+      }
+  }
+}
+.present__button {
+  margin: 0 0 16px;
+  height: 62px;
+  padding: 17px;
+  min-width: 390px;
+  color: #fff;
+  background-color: #8d81ac;
+  border: transparent;
+  border-radius: 30px;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20.45px;
+  outline: none;
+  cursor: pointer;
+  transition: color 200ms ease-in, background-color 200ms ease-in, border 200ms ease-in;
+  &:hover{
+    border: 1px solid $main-color;
+    color: $main-color;
+    background-color: white;
+  }
+}
+.present__subtitle{
+  color: #848e97;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 15px;
+}
+@media only screen and (min-width: $screen-sm + 1) and (max-width: $screen-md) {
+  .present-content{
+    &__title{
+      font-size:33px;
+    }
+    &__subtitle{
+      font-size: 14px;
+    }
+  }
+
+}
+@media only screen and (max-width: $screen-sm) {
+  .present__button{
+    min-width: 95%;
+  }
+  .present-content{
+    &__title{
+      font-size:26px;
+      line-height: 42px;
+      text-align: center;
+    }
+    &__subtitle{
+      font-size: 14px;
+      line-height: 20px;
+      padding-top:25px
+    }
+  }
+  .present-content__gitButtons{
+    display: none;
+  }
+  .present-github{
+    flex-wrap: wrap;
+    margin-top:15px;
+   &__links{
+     margin-top:20px;
+   }
+  }
+}

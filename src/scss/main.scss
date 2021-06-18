@@ -1,0 +1,28 @@
+@import "reset";
+
+a{
+  text-decoration: none;
+}
+#wrapper{
+  width: 100%;
+}
+
+.hamburger-menu{
+  display: none;
+  &__bars{
+    background-color: white;
+    border-radius: 4px;
+    width: 27px;
+    margin-bottom:6px;
+    height: 3px;
+    transition: all 200ms ease-in;
+    &--shorter{
+      width: 21px;
+    }
+  }
+
+}
+
+@import "variables";
+@import "components/components";
+@import "sections/sections";
